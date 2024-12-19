@@ -1,0 +1,34 @@
+<div class="container">
+
+  <nav class="navbar">
+    <a routerLink="/about-us" class="nav-link">Sobre Nosotros</a>
+    <a routerLink="/"><img [src]="logoPath" alt="Logo" class="logo"></a>
+    <a routerLink="/services" class="nav-link">Servicios</a>
+  </nav>
+
+
+  <section class="hero">
+    <img [src]="heroImagePath" alt="Persona con camiseta de la marca" class="hero-image">
+  </section>
+
+
+  <section class="services">
+    <h1 class="services-title">
+      SERVICIOS <span class="ampersand">&</span>
+      <span class="highlight">MÁS</span>
+    </h1>
+
+    <div class="services-grid">
+      <div class="services-column">
+        <button *ngFor="let service of leftServices" class="service-button">
+          {{service.name}}
+        </button>
+      </div>
+      <div class="services-column">
+        <button *ngFor="let service of rightServices" class="service-button">
+          {{service.name}}
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
